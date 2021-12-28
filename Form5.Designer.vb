@@ -39,7 +39,7 @@ Partial Class Bin
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.IC = New System.Windows.Forms.Button()
-        Me.TextBoxpass1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxpass = New System.Windows.Forms.TextBox()
         Me.btnpnl.SuspendLayout()
         Me.datapnl.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,7 +195,7 @@ Partial Class Bin
         Me.datapnl.Controls.Add(Me.ComboBox1)
         Me.datapnl.Controls.Add(Me.PictureBox1)
         Me.datapnl.Controls.Add(Me.IC)
-        Me.datapnl.Controls.Add(Me.TextBoxpass1)
+        Me.datapnl.Controls.Add(Me.TextBoxpass)
         Me.datapnl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datapnl.Location = New System.Drawing.Point(0, 0)
         Me.datapnl.Name = "datapnl"
@@ -271,16 +271,16 @@ Partial Class Bin
         Me.IC.TabIndex = 35
         Me.IC.UseVisualStyleBackColor = False
         '
-        'TextBoxpass1
+        'TextBoxpass
         '
-        Me.TextBoxpass1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxpass1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpass1.Location = New System.Drawing.Point(218, 316)
-        Me.TextBoxpass1.Name = "TextBoxpass1"
-        Me.TextBoxpass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxpass1.ReadOnly = True
-        Me.TextBoxpass1.Size = New System.Drawing.Size(342, 28)
-        Me.TextBoxpass1.TabIndex = 33
+        Me.TextBoxpass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxpass.Location = New System.Drawing.Point(218, 316)
+        Me.TextBoxpass.Name = "TextBoxpass"
+        Me.TextBoxpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxpass.ReadOnly = True
+        Me.TextBoxpass.Size = New System.Drawing.Size(342, 28)
+        Me.TextBoxpass.TabIndex = 33
         '
         'Bin
         '
@@ -317,7 +317,7 @@ Partial Class Bin
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents backbtn As Button
-    Friend WithEvents TextBoxpass1 As TextBox
+    Friend WithEvents TextBoxpass As TextBox
     Friend WithEvents IO As Button
     Friend WithEvents IC As Button
 End Class

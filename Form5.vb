@@ -35,7 +35,7 @@ Public Class Bin
         sdr.Read()
         If st = sdr("rsite").ToString() Then
             TextBoxName.Text = sdr("rname").ToString()
-            TextBoxPass1.Text = sdr("rpass").ToString()
+            TextBoxpass.Text = sdr("rpass").ToString()
             TextBoxLink.Text = sdr("rurl").ToString()
             TextBoxSite.Text = sdr("rsite").ToString()
         End If
@@ -60,7 +60,7 @@ Public Class Bin
 
                 MsgBox("Deleted Successfully", MsgBoxStyle.Information, "Notice")
                 TextBoxName.Text = ""
-                TextBoxpass1.Text = ""
+                TextBoxpass.Text = ""
                 TextBoxLink.Text = ""
                 TextBoxSite.Text = ""
                 con.Close()
@@ -116,7 +116,7 @@ Public Class Bin
                 MsgBox("Deleted Successfully!", MsgBoxStyle.Information, "Successfully Deleted!")
                 con.Close()
                 TextBoxName.Text = ""
-                TextBoxpass1.Text = ""
+                TextBoxpass.Text = ""
                 TextBoxLink.Text = ""
                 TextBoxSite.Text = ""
                 ComboBox1.Items.Clear()
@@ -156,18 +156,43 @@ Public Class Bin
         Else
             ans = MsgBox("Are you sure you want to Restore " + TextBoxSite.Text + "?", MsgBoxStyle.YesNo, "Restore " + TextBoxSite.Text + "?")
             If ans = vbYes Then
-                Dim str As String = ComboBox1.Text
                 con.Open()
-                Dim cmd3 As New SqlCommand
+                Dim cmd4 As New SqlCommand
+                Dim cmd2 As New SqlCommand, cmd3 As New SqlCommand
+                Dim n As Integer = -1
+
+
+
                 cmd3.Connection = con
-                cmd3.CommandText = "insert into main(lname,lsite,lpass,lurl) values('" + TextBoxName.Text + "','" + TextBoxSite.Text + "','" + TextBoxpass1.Text + "','" + TextBoxLink.Text + "')"
+                cmd3.CommandText = "Select count ([lsite]) from [Main] where lsite like ('%" + TextBoxSite.Text + "%')"
+                n = Convert.ToInt32(cmd3.ExecuteScalar())
+                con.Close()
+
+                If n > 0 Then
+                    n += 1
+                    Dim x As String = TextBoxSite.Text + " (" + n.ToString + ")"
+
+                    con.Open()
+                    cmd2.Connection = con
+                    cmd2.CommandText = "insert into Main(lurl,lpass,lname,lsite) values('" + TextBoxLink.Text + "','" + TextBoxpass.Text + "','" + TextBoxName.Text + "','" + x + "' )"
+
+                    cmd2.ExecuteNonQuery()
+                    con.Close()
+                Else
+                    con.Open()
+                    cmd4.Connection = con
+                    cmd4.CommandText = "insert into Main(lurl,lpass,lname,lsite) values('" + TextBoxLink.Text + "','" + TextBoxpass.Text + "','" + TextBoxName.Text + "','" + TextBoxSite.Text + "' )"
+                    cmd4.ExecuteNonQuery()
+                    con.Close()
+                End If
 
 
-                cmd3.ExecuteNonQuery()
+
+
 
                 MsgBox("Restored Successfully!", MsgBoxStyle.Information, "Restore")
                 TextBoxName.Text = ""
-                TextBoxpass1.Text = ""
+                TextBoxpass.Text = ""
                 TextBoxLink.Text = ""
                 TextBoxSite.Text = ""
                 ComboBox1.Items.Clear()
@@ -223,12 +248,12 @@ Public Class Bin
     End Sub
 
     Private Sub IC_Click(sender As Object, e As EventArgs) Handles IC.Click
-        TextBoxpass1.PasswordChar = "*"
+        TextBoxpass.PasswordChar = "*"
         IO.BringToFront()
     End Sub
 
     Private Sub IO_Click(sender As Object, e As EventArgs) Handles IO.Click
-        TextBoxpass1.PasswordChar = ""
+        TextBoxpass.PasswordChar = ""
         IC.BringToFront()
     End Sub
 End Class

@@ -106,27 +106,6 @@ Public Class Dashboard
             End Try
         End If
     End Sub
-
-    Function Refresh()
-        ComboBox1.Items.Clear()
-        Try
-            con.Open()
-            Dim da As New SqlDataAdapter("select lsite from Main", con)
-            Dim ds As New DataSet
-            da.Fill(ds, "1")
-
-
-            For i As Integer = 0 To ds.Tables("1").Rows.Count - 1
-                Me.ComboBox1.Items.Add(ds.Tables("1").Rows(i)(0))
-            Next
-
-        Catch ex As Exception
-            MsgBox("Error : " + ex.Message)
-        Finally
-            con.Close()
-        End Try
-    End Function
-
     Private Sub binbtn_Click(sender As Object, e As EventArgs) Handles binbtn.Click
         Bin.Show()
         Me.Close()
