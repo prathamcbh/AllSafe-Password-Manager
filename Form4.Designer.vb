@@ -388,6 +388,7 @@ Partial Class Dashboard
         Me.Controls.Add(Me.datapnl)
         Me.Controls.Add(Me.btnpnl)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

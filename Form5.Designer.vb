@@ -22,6 +22,7 @@ Partial Class Bin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bin))
         Me.btnpnl = New System.Windows.Forms.Panel()
         Me.BtnDelA = New System.Windows.Forms.Button()
         Me.BtnDel = New System.Windows.Forms.Button()
@@ -290,6 +291,7 @@ Partial Class Bin
         Me.Controls.Add(Me.datapnl)
         Me.Controls.Add(Me.btnpnl)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Bin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -262,6 +262,7 @@ Partial Class Form3
         Me.Controls.Add(Me.TextBoxN)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form3"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
