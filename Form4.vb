@@ -206,11 +206,19 @@ Public Class Dashboard
     End Sub
 
     Private Sub Cpypw_Click(sender As Object, e As EventArgs) Handles Cpypw.Click
-        My.Computer.Clipboard.SetText(TextBoxpass.Text)
+        If TextBoxpass.Text = "" Then
+            MsgBox("Cannot copy blank field! Select an item to copy.", MsgBoxStyle.Information, "Blank field cannot be copied")
+        Else
+            My.Computer.Clipboard.SetText(TextBoxpass.Text)
+        End If
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles cpyu.Click
-        My.Computer.Clipboard.SetText(TextBoxuname.Text)
+        If TextBoxuname.Text = "" Then
+            MsgBox("Cannot copy blank field! Select an item to copy.", MsgBoxStyle.Information, "Blank field cannot be copied")
+        Else
+            My.Computer.Clipboard.SetText(TextBoxuname.Text)
+        End If
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles oplnk.LinkClicked
@@ -318,6 +326,17 @@ Public Class Dashboard
         con.Close()
 
     End Sub
+
+    Private Sub TextBoxpass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxpass.KeyPress
+        If ComboBox1.Text = "" Then
+            If e.KeyChar <> ChrW(Keys.Back) Then
+
+                e.Handled = True
+            End If
+        End If
+
+    End Sub
+
     Function RandomString(minCharacters As Integer, maxCharacters As Integer)
 
         Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()+-{}[]~<>"
@@ -331,5 +350,21 @@ Public Class Dashboard
         Return sb.ToString()
     End Function
 
+    Private Sub TextBoxlink_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxlink.KeyPress
+        If ComboBox1.Text = "" Then
+            If e.KeyChar <> ChrW(Keys.Back) Then
 
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBoxuname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxuname.KeyPress
+        If ComboBox1.Text = "" Then
+            If e.KeyChar <> ChrW(Keys.Back) Then
+
+                e.Handled = True
+            End If
+        End If
+    End Sub
 End Class

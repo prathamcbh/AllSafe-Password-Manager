@@ -152,8 +152,9 @@ Public Class Settings
                 cmd1.ExecuteNonQuery()
                 con.Close()
                 MsgBox("Updated Successfully", MsgBoxStyle.Information, "Success")
-                Me.Close()
-                Login.Show()
+                TextBoxNP.Text = ""
+                TextBoxCP.Text = ""
+                TextBoxCurrentPass.Text = ""
             End If
         End If
     End Sub
