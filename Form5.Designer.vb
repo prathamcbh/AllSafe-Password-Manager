@@ -35,11 +35,11 @@ Partial Class Bin
         Me.TextBoxSite = New System.Windows.Forms.TextBox()
         Me.datapnl = New System.Windows.Forms.Panel()
         Me.IO = New System.Windows.Forms.Button()
-        Me.TextBoxpass1 = New System.Windows.Forms.TextBox()
         Me.backbtn = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.IC = New System.Windows.Forms.Button()
+        Me.TextBoxpass1 = New System.Windows.Forms.TextBox()
         Me.btnpnl.SuspendLayout()
         Me.datapnl.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,7 +184,6 @@ Partial Class Bin
         '
         Me.datapnl.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.datapnl.Controls.Add(Me.IO)
-        Me.datapnl.Controls.Add(Me.TextBoxpass1)
         Me.datapnl.Controls.Add(Me.backbtn)
         Me.datapnl.Controls.Add(Me.Label5)
         Me.datapnl.Controls.Add(Me.TextBoxSite)
@@ -196,6 +195,7 @@ Partial Class Bin
         Me.datapnl.Controls.Add(Me.ComboBox1)
         Me.datapnl.Controls.Add(Me.PictureBox1)
         Me.datapnl.Controls.Add(Me.IC)
+        Me.datapnl.Controls.Add(Me.TextBoxpass1)
         Me.datapnl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datapnl.Location = New System.Drawing.Point(0, 0)
         Me.datapnl.Name = "datapnl"
@@ -212,22 +212,11 @@ Partial Class Bin
         Me.IO.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IO.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.IO.Image = Global.Password_Manager_1._1.My.Resources.Resources.IO
-        Me.IO.Location = New System.Drawing.Point(513, 316)
+        Me.IO.Location = New System.Drawing.Point(515, 316)
         Me.IO.Name = "IO"
-        Me.IO.Size = New System.Drawing.Size(45, 26)
+        Me.IO.Size = New System.Drawing.Size(45, 28)
         Me.IO.TabIndex = 34
         Me.IO.UseVisualStyleBackColor = False
-        '
-        'TextBoxpass1
-        '
-        Me.TextBoxpass1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxpass1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpass1.Location = New System.Drawing.Point(218, 316)
-        Me.TextBoxpass1.Name = "TextBoxpass1"
-        Me.TextBoxpass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxpass1.ReadOnly = True
-        Me.TextBoxpass1.Size = New System.Drawing.Size(342, 28)
-        Me.TextBoxpass1.TabIndex = 33
         '
         'backbtn
         '
@@ -276,11 +265,22 @@ Partial Class Bin
         Me.IC.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IC.ForeColor = System.Drawing.SystemColors.Control
         Me.IC.Image = Global.Password_Manager_1._1.My.Resources.Resources.IC
-        Me.IC.Location = New System.Drawing.Point(513, 316)
+        Me.IC.Location = New System.Drawing.Point(515, 316)
         Me.IC.Name = "IC"
-        Me.IC.Size = New System.Drawing.Size(45, 26)
+        Me.IC.Size = New System.Drawing.Size(45, 28)
         Me.IC.TabIndex = 35
         Me.IC.UseVisualStyleBackColor = False
+        '
+        'TextBoxpass1
+        '
+        Me.TextBoxpass1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxpass1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxpass1.Location = New System.Drawing.Point(218, 316)
+        Me.TextBoxpass1.Name = "TextBoxpass1"
+        Me.TextBoxpass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxpass1.ReadOnly = True
+        Me.TextBoxpass1.Size = New System.Drawing.Size(342, 28)
+        Me.TextBoxpass1.TabIndex = 33
         '
         'Bin
         '

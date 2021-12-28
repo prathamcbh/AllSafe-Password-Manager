@@ -34,9 +34,9 @@ Partial Class NewPass
         Me.TextBoxpass = New System.Windows.Forms.TextBox()
         Me.backbtn = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.IO = New System.Windows.Forms.Button()
         Me.IC = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnpnl = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.datapnl.SuspendLayout()
@@ -137,7 +137,6 @@ Partial Class NewPass
         'datapnl
         '
         Me.datapnl.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.datapnl.Controls.Add(Me.TextBoxpass)
         Me.datapnl.Controls.Add(Me.backbtn)
         Me.datapnl.Controls.Add(Me.LinkLabel1)
         Me.datapnl.Controls.Add(Me.Label5)
@@ -149,6 +148,7 @@ Partial Class NewPass
         Me.datapnl.Controls.Add(Me.TextBoxuname)
         Me.datapnl.Controls.Add(Me.IO)
         Me.datapnl.Controls.Add(Me.IC)
+        Me.datapnl.Controls.Add(Me.TextBoxpass)
         Me.datapnl.Controls.Add(Me.PictureBox1)
         Me.datapnl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datapnl.Location = New System.Drawing.Point(0, 0)
@@ -193,16 +193,6 @@ Partial Class NewPass
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Generate"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.Password_Manager_1._1.My.Resources.Resources.Allsafe4
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(95, -126)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(426, 349)
-        Me.PictureBox1.TabIndex = 23
-        Me.PictureBox1.TabStop = False
-        '
         'IO
         '
         Me.IO.BackColor = System.Drawing.SystemColors.Control
@@ -215,7 +205,7 @@ Partial Class NewPass
         Me.IO.Image = Global.Password_Manager_1._1.My.Resources.Resources.IO
         Me.IO.Location = New System.Drawing.Point(486, 214)
         Me.IO.Name = "IO"
-        Me.IO.Size = New System.Drawing.Size(45, 26)
+        Me.IO.Size = New System.Drawing.Size(45, 28)
         Me.IO.TabIndex = 30
         Me.IO.UseVisualStyleBackColor = False
         '
@@ -229,11 +219,21 @@ Partial Class NewPass
         Me.IC.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IC.ForeColor = System.Drawing.SystemColors.Control
         Me.IC.Image = Global.Password_Manager_1._1.My.Resources.Resources.IC
-        Me.IC.Location = New System.Drawing.Point(487, 213)
+        Me.IC.Location = New System.Drawing.Point(486, 214)
         Me.IC.Name = "IC"
-        Me.IC.Size = New System.Drawing.Size(45, 26)
+        Me.IC.Size = New System.Drawing.Size(45, 28)
         Me.IC.TabIndex = 29
         Me.IC.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.Password_Manager_1._1.My.Resources.Resources.Allsafe4
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(95, -126)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(426, 349)
+        Me.PictureBox1.TabIndex = 23
+        Me.PictureBox1.TabStop = False
         '
         'btnpnl
         '

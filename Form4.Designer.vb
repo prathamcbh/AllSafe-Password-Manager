@@ -44,8 +44,8 @@ Partial Class Dashboard
         Me.TextBoxlink = New System.Windows.Forms.TextBox()
         Me.TextBoxuname = New System.Windows.Forms.TextBox()
         Me.IO = New System.Windows.Forms.Button()
-        Me.TextBoxpass = New System.Windows.Forms.TextBox()
         Me.IC = New System.Windows.Forms.Button()
+        Me.TextBoxpass = New System.Windows.Forms.TextBox()
         Me.btnpnl.SuspendLayout()
         Me.datapnl.SuspendLayout()
         Me.SuspendLayout()
@@ -352,17 +352,6 @@ Partial Class Dashboard
         Me.IO.TabIndex = 3
         Me.IO.UseVisualStyleBackColor = False
         '
-        'TextBoxpass
-        '
-        Me.TextBoxpass.BackColor = System.Drawing.Color.White
-        Me.TextBoxpass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpass.Location = New System.Drawing.Point(221, 207)
-        Me.TextBoxpass.Name = "TextBoxpass"
-        Me.TextBoxpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxpass.Size = New System.Drawing.Size(395, 28)
-        Me.TextBoxpass.TabIndex = 17
-        '
         'IC
         '
         Me.IC.BackColor = System.Drawing.Color.White
@@ -378,6 +367,17 @@ Partial Class Dashboard
         Me.IC.Size = New System.Drawing.Size(45, 28)
         Me.IC.TabIndex = 27
         Me.IC.UseVisualStyleBackColor = False
+        '
+        'TextBoxpass
+        '
+        Me.TextBoxpass.BackColor = System.Drawing.Color.White
+        Me.TextBoxpass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxpass.Location = New System.Drawing.Point(221, 207)
+        Me.TextBoxpass.Name = "TextBoxpass"
+        Me.TextBoxpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxpass.Size = New System.Drawing.Size(395, 28)
+        Me.TextBoxpass.TabIndex = 17
         '
         'Dashboard
         '
