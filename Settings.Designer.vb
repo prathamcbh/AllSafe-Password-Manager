@@ -26,12 +26,20 @@ Partial Class Settings
         Me.btnpass = New System.Windows.Forms.Button()
         Me.Btnbkpstr = New System.Windows.Forms.Button()
         Me.PanelBkpstr = New System.Windows.Forms.Panel()
+        Me.IOB = New System.Windows.Forms.Button()
+        Me.ICB = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Textboxbkpstr = New System.Windows.Forms.TextBox()
         Me.BtnChgbkpstr = New System.Windows.Forms.Button()
         Me.BtnSavebkpstr = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panelpass = New System.Windows.Forms.Panel()
+        Me.IOCP = New System.Windows.Forms.Button()
+        Me.ICCP = New System.Windows.Forms.Button()
+        Me.IOnp = New System.Windows.Forms.Button()
+        Me.ICnp = New System.Windows.Forms.Button()
+        Me.IOCr = New System.Windows.Forms.Button()
+        Me.ICCr = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -92,6 +100,8 @@ Partial Class Settings
         '
         'PanelBkpstr
         '
+        Me.PanelBkpstr.Controls.Add(Me.IOB)
+        Me.PanelBkpstr.Controls.Add(Me.ICB)
         Me.PanelBkpstr.Controls.Add(Me.Button1)
         Me.PanelBkpstr.Controls.Add(Me.Textboxbkpstr)
         Me.PanelBkpstr.Controls.Add(Me.BtnChgbkpstr)
@@ -101,6 +111,38 @@ Partial Class Settings
         Me.PanelBkpstr.Name = "PanelBkpstr"
         Me.PanelBkpstr.Size = New System.Drawing.Size(574, 354)
         Me.PanelBkpstr.TabIndex = 6
+        '
+        'IOB
+        '
+        Me.IOB.BackColor = System.Drawing.SystemColors.Control
+        Me.IOB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.IOB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IOB.FlatAppearance.BorderSize = 0
+        Me.IOB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IOB.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IOB.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.IOB.Image = Global.Password_Manager_1._1.My.Resources.Resources.IO
+        Me.IOB.Location = New System.Drawing.Point(471, 191)
+        Me.IOB.Name = "IOB"
+        Me.IOB.Size = New System.Drawing.Size(45, 28)
+        Me.IOB.TabIndex = 35
+        Me.IOB.UseVisualStyleBackColor = False
+        '
+        'ICB
+        '
+        Me.ICB.BackColor = System.Drawing.SystemColors.Control
+        Me.ICB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ICB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ICB.FlatAppearance.BorderSize = 0
+        Me.ICB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ICB.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICB.ForeColor = System.Drawing.SystemColors.Control
+        Me.ICB.Image = Global.Password_Manager_1._1.My.Resources.Resources.IC
+        Me.ICB.Location = New System.Drawing.Point(471, 191)
+        Me.ICB.Name = "ICB"
+        Me.ICB.Size = New System.Drawing.Size(45, 28)
+        Me.ICB.TabIndex = 34
+        Me.ICB.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -123,6 +165,7 @@ Partial Class Settings
         Me.Textboxbkpstr.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Textboxbkpstr.Location = New System.Drawing.Point(59, 191)
         Me.Textboxbkpstr.Name = "Textboxbkpstr"
+        Me.Textboxbkpstr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Textboxbkpstr.ReadOnly = True
         Me.Textboxbkpstr.Size = New System.Drawing.Size(457, 28)
         Me.Textboxbkpstr.TabIndex = 6
@@ -170,6 +213,12 @@ Partial Class Settings
         '
         'Panelpass
         '
+        Me.Panelpass.Controls.Add(Me.IOCP)
+        Me.Panelpass.Controls.Add(Me.ICCP)
+        Me.Panelpass.Controls.Add(Me.IOnp)
+        Me.Panelpass.Controls.Add(Me.ICnp)
+        Me.Panelpass.Controls.Add(Me.IOCr)
+        Me.Panelpass.Controls.Add(Me.ICCr)
         Me.Panelpass.Controls.Add(Me.Label4)
         Me.Panelpass.Controls.Add(Me.btnsave)
         Me.Panelpass.Controls.Add(Me.Label3)
@@ -183,6 +232,102 @@ Partial Class Settings
         Me.Panelpass.Name = "Panelpass"
         Me.Panelpass.Size = New System.Drawing.Size(574, 354)
         Me.Panelpass.TabIndex = 8
+        '
+        'IOCP
+        '
+        Me.IOCP.BackColor = System.Drawing.SystemColors.Control
+        Me.IOCP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.IOCP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IOCP.FlatAppearance.BorderSize = 0
+        Me.IOCP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IOCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IOCP.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.IOCP.Image = Global.Password_Manager_1._1.My.Resources.Resources.IO
+        Me.IOCP.Location = New System.Drawing.Point(501, 231)
+        Me.IOCP.Name = "IOCP"
+        Me.IOCP.Size = New System.Drawing.Size(45, 28)
+        Me.IOCP.TabIndex = 42
+        Me.IOCP.UseVisualStyleBackColor = False
+        '
+        'ICCP
+        '
+        Me.ICCP.BackColor = System.Drawing.SystemColors.Control
+        Me.ICCP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ICCP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ICCP.FlatAppearance.BorderSize = 0
+        Me.ICCP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ICCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICCP.ForeColor = System.Drawing.SystemColors.Control
+        Me.ICCP.Image = Global.Password_Manager_1._1.My.Resources.Resources.IC
+        Me.ICCP.Location = New System.Drawing.Point(501, 231)
+        Me.ICCP.Name = "ICCP"
+        Me.ICCP.Size = New System.Drawing.Size(45, 28)
+        Me.ICCP.TabIndex = 41
+        Me.ICCP.UseVisualStyleBackColor = False
+        '
+        'IOnp
+        '
+        Me.IOnp.BackColor = System.Drawing.SystemColors.Control
+        Me.IOnp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.IOnp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IOnp.FlatAppearance.BorderSize = 0
+        Me.IOnp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IOnp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IOnp.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.IOnp.Image = Global.Password_Manager_1._1.My.Resources.Resources.IO
+        Me.IOnp.Location = New System.Drawing.Point(500, 172)
+        Me.IOnp.Name = "IOnp"
+        Me.IOnp.Size = New System.Drawing.Size(45, 28)
+        Me.IOnp.TabIndex = 40
+        Me.IOnp.UseVisualStyleBackColor = False
+        '
+        'ICnp
+        '
+        Me.ICnp.BackColor = System.Drawing.SystemColors.Control
+        Me.ICnp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ICnp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ICnp.FlatAppearance.BorderSize = 0
+        Me.ICnp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ICnp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICnp.ForeColor = System.Drawing.SystemColors.Control
+        Me.ICnp.Image = Global.Password_Manager_1._1.My.Resources.Resources.IC
+        Me.ICnp.Location = New System.Drawing.Point(501, 172)
+        Me.ICnp.Name = "ICnp"
+        Me.ICnp.Size = New System.Drawing.Size(45, 28)
+        Me.ICnp.TabIndex = 39
+        Me.ICnp.UseVisualStyleBackColor = False
+        '
+        'IOCr
+        '
+        Me.IOCr.BackColor = System.Drawing.SystemColors.Control
+        Me.IOCr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.IOCr.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IOCr.FlatAppearance.BorderSize = 0
+        Me.IOCr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IOCr.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IOCr.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.IOCr.Image = Global.Password_Manager_1._1.My.Resources.Resources.IO
+        Me.IOCr.Location = New System.Drawing.Point(501, 114)
+        Me.IOCr.Name = "IOCr"
+        Me.IOCr.Size = New System.Drawing.Size(45, 28)
+        Me.IOCr.TabIndex = 38
+        Me.IOCr.UseVisualStyleBackColor = False
+        '
+        'ICCr
+        '
+        Me.ICCr.BackColor = System.Drawing.SystemColors.Control
+        Me.ICCr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ICCr.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ICCr.FlatAppearance.BorderSize = 0
+        Me.ICCr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ICCr.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICCr.ForeColor = System.Drawing.SystemColors.Control
+        Me.ICCr.Image = Global.Password_Manager_1._1.My.Resources.Resources.IC
+        Me.ICCr.Location = New System.Drawing.Point(500, 114)
+        Me.ICCr.Name = "ICCr"
+        Me.ICCr.Size = New System.Drawing.Size(45, 28)
+        Me.ICCr.TabIndex = 37
+        Me.ICCr.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -213,20 +358,21 @@ Partial Class Settings
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label3.Location = New System.Drawing.Point(21, 113)
+        Me.Label3.Location = New System.Drawing.Point(30, 113)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(221, 29)
+        Me.Label3.Size = New System.Drawing.Size(205, 29)
         Me.Label3.TabIndex = 34
         Me.Label3.Text = "Current Password"
         '
         'TextBoxCurrentPass
         '
         Me.TextBoxCurrentPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxCurrentPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCurrentPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.TextBoxCurrentPass.Location = New System.Drawing.Point(270, 114)
         Me.TextBoxCurrentPass.Name = "TextBoxCurrentPass"
+        Me.TextBoxCurrentPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxCurrentPass.Size = New System.Drawing.Size(276, 28)
         Me.TextBoxCurrentPass.TabIndex = 33
         '
@@ -248,18 +394,18 @@ Partial Class Settings
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label2.Location = New System.Drawing.Point(21, 231)
+        Me.Label2.Location = New System.Drawing.Point(30, 231)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(226, 29)
+        Me.Label2.Size = New System.Drawing.Size(210, 29)
         Me.Label2.TabIndex = 31
         Me.Label2.Text = "Confirm Password"
         '
         'TextBoxCP
         '
         Me.TextBoxCP.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.TextBoxCP.Location = New System.Drawing.Point(270, 231)
         Me.TextBoxCP.Name = "TextBoxCP"
         Me.TextBoxCP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -269,18 +415,18 @@ Partial Class Settings
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label1.Location = New System.Drawing.Point(21, 172)
+        Me.Label1.Location = New System.Drawing.Point(30, 172)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(188, 29)
+        Me.Label1.Size = New System.Drawing.Size(176, 29)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "New Password"
         '
         'TextBoxNP
         '
         Me.TextBoxNP.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxNP.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxNP.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.TextBoxNP.Location = New System.Drawing.Point(270, 172)
         Me.TextBoxNP.Name = "TextBoxNP"
         Me.TextBoxNP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -294,8 +440,8 @@ Partial Class Settings
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(574, 427)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.PanelBkpstr)
         Me.Controls.Add(Me.Panelpass)
+        Me.Controls.Add(Me.PanelBkpstr)
         Me.DoubleBuffered = True
         Me.MaximizeBox = False
         Me.Name = "Settings"
@@ -329,4 +475,12 @@ Partial Class Settings
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents IOB As Button
+    Friend WithEvents ICB As Button
+    Friend WithEvents IOCP As Button
+    Friend WithEvents ICCP As Button
+    Friend WithEvents IOnp As Button
+    Friend WithEvents ICnp As Button
+    Friend WithEvents IOCr As Button
+    Friend WithEvents ICCr As Button
 End Class

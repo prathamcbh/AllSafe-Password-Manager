@@ -170,4 +170,43 @@ Public Class Settings
 
     End Sub
 
+    Private Sub IOB_Click(sender As Object, e As EventArgs) Handles IOB.Click
+        ICB.BringToFront()
+        Textboxbkpstr.PasswordChar = ""
+    End Sub
+
+    Private Sub ICB_Click(sender As Object, e As EventArgs) Handles ICB.Click
+        IOB.BringToFront()
+        Textboxbkpstr.PasswordChar = "*"
+    End Sub
+
+    Private Sub IOCr_Click(sender As Object, e As EventArgs) Handles IOCr.Click
+        ICCr.BringToFront()
+        TextBoxCurrentPass.PasswordChar = ""
+    End Sub
+
+    Private Sub IOCP_Click(sender As Object, e As EventArgs) Handles IOCP.Click
+        ICCP.BringToFront()
+        TextBoxCP.PasswordChar = ""
+    End Sub
+
+    Private Sub ICCr_Click(sender As Object, e As EventArgs) Handles ICCr.Click
+        IOCr.BringToFront()
+        TextBoxCurrentPass.PasswordChar = "*"
+    End Sub
+
+    Private Sub IOnp_Click(sender As Object, e As EventArgs) Handles IOnp.Click
+        ICnp.BringToFront()
+        TextBoxNP.PasswordChar = ""
+    End Sub
+
+    Private Sub ICnp_Click(sender As Object, e As EventArgs) Handles ICnp.Click
+        IOnp.BringToFront()
+        TextBoxNP.PasswordChar = "*"
+    End Sub
+
+    Private Sub ICCP_Click(sender As Object, e As EventArgs) Handles ICCP.Click
+        IOCP.BringToFront()
+        TextBoxCP.PasswordChar = "*"
+    End Sub
 End Class

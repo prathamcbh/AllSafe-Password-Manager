@@ -31,11 +31,11 @@ Partial Class NewPass
         Me.TextBoxlink = New System.Windows.Forms.TextBox()
         Me.TextBoxuname = New System.Windows.Forms.TextBox()
         Me.datapnl = New System.Windows.Forms.Panel()
-        Me.TextBoxpass = New System.Windows.Forms.TextBox()
         Me.backbtn = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.IO = New System.Windows.Forms.Button()
         Me.IC = New System.Windows.Forms.Button()
+        Me.TextBoxpass = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnpnl = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -156,16 +156,6 @@ Partial Class NewPass
         Me.datapnl.Size = New System.Drawing.Size(617, 358)
         Me.datapnl.TabIndex = 4
         '
-        'TextBoxpass
-        '
-        Me.TextBoxpass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpass.Location = New System.Drawing.Point(245, 214)
-        Me.TextBoxpass.Name = "TextBoxpass"
-        Me.TextBoxpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxpass.Size = New System.Drawing.Size(286, 28)
-        Me.TextBoxpass.TabIndex = 25
-        '
         'backbtn
         '
         Me.backbtn.BackColor = System.Drawing.Color.Transparent
@@ -224,6 +214,16 @@ Partial Class NewPass
         Me.IC.Size = New System.Drawing.Size(45, 28)
         Me.IC.TabIndex = 29
         Me.IC.UseVisualStyleBackColor = False
+        '
+        'TextBoxpass
+        '
+        Me.TextBoxpass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxpass.Location = New System.Drawing.Point(245, 214)
+        Me.TextBoxpass.Name = "TextBoxpass"
+        Me.TextBoxpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxpass.Size = New System.Drawing.Size(286, 28)
+        Me.TextBoxpass.TabIndex = 25
         '
         'PictureBox1
         '
