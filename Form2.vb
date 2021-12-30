@@ -93,17 +93,17 @@ Public Class Form2
 
         If Not chk Then
             If Not HasNum Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol", MsgBoxStyle.Critical, "Enter a strong password")
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol NUM", MsgBoxStyle.Critical, "Enter a strong password")
 
             ElseIf Not HasCaps Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol", MsgBoxStyle.Critical, "Enter a strong password")
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol CAPS", MsgBoxStyle.Critical, "Enter a strong password")
             ElseIf Not HasLower Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol", MsgBoxStyle.Critical, "Enter a strong password")
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol LOWER", MsgBoxStyle.Critical, "Enter a strong password")
             ElseIf Not HasChar Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol", MsgBoxStyle.Critical, "Enter a strong password")
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol CHAR", MsgBoxStyle.Critical, "Enter a strong password")
             Else
                 backupkeyR.Text = RandomString(10, 10)
-                MsgBox("Note the Recovery Key somewhere safe. If forgot password, use Recovery key to reset it!", MsgBoxStyle.Information, "Notice")
+                MsgBox("Note the Recovery Key somewhere safe. If you forgot password, use Recovery key to reset it!", MsgBoxStyle.Information, "Notice")
                 LabelRec.Show()
                 backupkeyR.Show()
                 IOR.Show()
