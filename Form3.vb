@@ -140,4 +140,8 @@ Public Class Form3
         IOCP.BringToFront()
         TextBoxC.PasswordChar = "*"
     End Sub
+
+    Private Sub Form3_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter
+
+    End Sub
 End Class

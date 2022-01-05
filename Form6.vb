@@ -13,16 +13,16 @@ Public Class Splash
             cmd.CommandText = "SELECT Count([unameAS]) FROM [Login]"
             cmd.ExecuteNonQuery()
             count = Convert.ToInt32(cmd.ExecuteScalar())
-            If count = 0 Then
-                Form2.Show()
-            Else
-                Login.Show()
-            End If
             con.Close()
 
         End If
         If ProgressBar1.Value = 100 Then
             Timer1.Enabled = False
+            If count = 0 Then
+                Form2.Show()
+            Else
+                Login.Show()
+            End If
             Me.Hide()
 
         End If

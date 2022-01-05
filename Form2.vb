@@ -55,26 +55,43 @@ Public Class Form2
         Dim MinLength As Integer = 8
         Dim PW As String = TextPass.Text
         Dim chk As Boolean
+        Dim chk2 As Boolean
         If TextBoxUname.Text = "" Or TextPass.Text = "" Or TextCPass.Text = "" Then
             MsgBox("Username and Password cannot be left blank", MsgBoxStyle.Exclamation, "Enter Credentials")
             chk = True
+            chk2 = True
         ElseIf TextPass.Text <> TextCPass.Text Then
             MsgBox("Those passwords didn't match. Please try again!", MsgBoxStyle.Information, "Check the passwords")
             chk = True
+            chk2 = True
         ElseIf TextBoxUname.Text.Trim = "" Then
             MsgBox("Username cannot have just spaces. Please re-insert the Name!", MsgBoxStyle.Critical, "Check the Fields")
             chk = True
+            chk2 = True
         ElseIf TextPass.Text.Trim = "" Then
             MsgBox("Password cannot have just spaces. Please re-insert the Password!", MsgBoxStyle.Critical, "Check the Fields")
             chk = True
-
+            chk2 = True
 
         ElseIf Len(PW) < MinLength Then
             MsgBox("Password should be atleast 8 charcters", MsgBoxStyle.Exclamation, "Warning!")
             chk = True
+            chk2=True
         Else
             For x = 1 To Len(PW)
                 CurChar = Mid(PW, x, 1)
+                '           If Asc(CurChar) > 48 And Asc(CurChar) < 57 Then
+                '          HasNum = True
+                ' End If
+                '        If Asc(CurChar) > 65 And Asc(CurChar) < 90 Then
+                '       HasCaps = True
+                'End If
+
+                '        If Asc(CurChar) > 97 And Asc(CurChar) < 122 Then
+                '       HasLower = True
+                '      Else
+                '     HasChar = True
+                'End If
                 Select Case Asc(CurChar)
                     Case 48 To 57   'Numbers
                         HasNum = True
@@ -84,8 +101,10 @@ Public Class Form2
                         HasLower = True
                     Case Else       'Characters
                         HasChar = True
-                        Exit For
                 End Select
+
+                Exit For
+
             Next x
             chk = False
         End If
@@ -94,26 +113,35 @@ Public Class Form2
         If Not chk Then
             If Not HasNum Then
                 MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol NUM", MsgBoxStyle.Critical, "Enter a strong password")
-
-            ElseIf Not HasCaps Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol CAPS", MsgBoxStyle.Critical, "Enter a strong password")
-            ElseIf Not HasLower Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol LOWER", MsgBoxStyle.Critical, "Enter a strong password")
-            ElseIf Not HasChar Then
-                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol CHAR", MsgBoxStyle.Critical, "Enter a strong password")
-            Else
-                backupkeyR.Text = RandomString(10, 10)
-                MsgBox("Note the Recovery Key somewhere safe. If you forgot password, use Recovery key to reset it!", MsgBoxStyle.Information, "Notice")
-                LabelRec.Show()
-                backupkeyR.Show()
-                IOR.Show()
-                ICR.Show()
-
-                IOR.BringToFront()
-                crtbtn.BringToFront()
+                chk2 = True
             End If
-        End If
+            If Not HasCaps Then
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol CAPS", MsgBoxStyle.Critical, "Enter a strong password")
+                chk2 = True
+            End If
 
+            If Not HasLower Then
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol LOWER", MsgBoxStyle.Critical, "Enter a strong password")
+                chk2 = True
+            End If
+            If Not HasChar Then
+                MsgBox("Enter a strong password with a Upper case, Lower case, number and a symbol CHAR", MsgBoxStyle.Critical, "Enter a strong password")
+                chk2 = True
+            End If
+
+
+        End If
+        If chk2 = False Then
+            backupkeyR.Text = RandomString(10, 10)
+            MsgBox("Note the Recovery Key somewhere safe. If you forgot password, use Recovery key to reset it!", MsgBoxStyle.Information, "Notice")
+            LabelRec.Show()
+            backupkeyR.Show()
+            IOR.Show()
+            ICR.Show()
+
+            IOR.BringToFront()
+            crtbtn.BringToFront()
+        End If
     End Sub
 
     Private Sub Buttonconfirm_MouseEnter(sender As Object, e As EventArgs) Handles Buttonconfirm.MouseEnter

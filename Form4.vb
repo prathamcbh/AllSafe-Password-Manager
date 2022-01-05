@@ -367,4 +367,8 @@ Public Class Dashboard
             End If
         End If
     End Sub
+
+    Private Sub btnlck_MouseHover(sender As Object, e As EventArgs) Handles btnlck.MouseHover
+
+    End Sub
 End Class
