@@ -4,7 +4,7 @@ Public Class Splash
     Dim cmd As New SqlCommand
     Dim count As Integer = -1
 
-
+    'Git Try
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ProgressBar1.Value = ProgressBar1.Value + 1
         If ProgressBar1.Value = 80 Then
