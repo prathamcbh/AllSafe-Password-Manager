@@ -210,4 +210,52 @@ Public Class Settings
         IOCP.BringToFront()
         TextBoxCP.PasswordChar = "*"
     End Sub
+
+    Private Sub btnsave_MouseEnter(sender As Object, e As EventArgs) Handles btnsave.MouseEnter
+        btnsave.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub btnsave_MouseLeave(sender As Object, e As EventArgs) Handles btnsave.MouseLeave
+        btnsave.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Btnbkpstr_MouseEnter(sender As Object, e As EventArgs) Handles Btnbkpstr.MouseEnter
+        Btnbkpstr.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub Btnbkpstr_MouseLeave(sender As Object, e As EventArgs) Handles Btnbkpstr.MouseLeave
+        Btnbkpstr.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub btnpass_MouseEnter(sender As Object, e As EventArgs) Handles btnpass.MouseEnter
+        btnpass.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub btnpass_MouseLeave(sender As Object, e As EventArgs) Handles btnpass.MouseLeave
+        btnpass.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub BtnChgbkpstr_MouseEnter(sender As Object, e As EventArgs) Handles BtnChgbkpstr.MouseEnter
+        BtnChgbkpstr.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub BtnChgbkpstr_MouseLeave(sender As Object, e As EventArgs) Handles BtnChgbkpstr.MouseLeave
+        BtnChgbkpstr.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub BtnSavebkpstr_MouseEnter(sender As Object, e As EventArgs) Handles BtnSavebkpstr.MouseEnter
+        BtnSavebkpstr.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub BtnSavebkpstr_MouseLeave(sender As Object, e As EventArgs) Handles BtnSavebkpstr.MouseLeave
+        BtnSavebkpstr.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
+        Button1.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        Button1.BackColor = Color.Transparent
+    End Sub
 End Class

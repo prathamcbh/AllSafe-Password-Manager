@@ -4,6 +4,7 @@ Imports System.Configuration
 Imports System.Data.SqlClient
 
 Public Class Dashboard
+    Dim ans As Integer
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OneDrive New\OneDrive - T. John Group of Institutions\Projects\Password manager\VB Files\Password Manager 1.1\Database1.mdf;Integrated Security=True")
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnlck.Click
         Me.Close()
@@ -116,73 +117,75 @@ Public Class Dashboard
         Dim b As String
         Dim c As String
         Dim current As String = ComboBox1.Text
+        ans = MsgBox("Are you sure you want to overwrite?", vbOKCancel, "Overwrite the details?")
+        If ans = vbOK Then
 
-
-        If ComboBox1.Text = "" Then
-            MsgBox("Select an item to be overwritten", MsgBoxStyle.Critical, "Select password")
-        ElseIf TextBoxuname.Text.Trim = "" Then
-            MsgBox("Username cannot have just spaces. Please re-insert the Name!", MsgBoxStyle.Critical, "Re-enter Username")
-        ElseIf TextBoxpass.Text.Trim = "" Then
-            MsgBox("Password cannot have just spaces. Please re-insert the Password!", MsgBoxStyle.Critical, "Re-enter Password")
-        ElseIf TextBoxlink.Text.Trim = "" Then
-            MsgBox("Link cannot have just spaces. Please re-insert the Link!", MsgBoxStyle.Critical, "Re-enter Link")
-        ElseIf TextBoxlink.Text.Contains(" ") Then
-            MsgBox("Link cannot have spaces. Please Re-insert correct Link", MsgBoxStyle.Information, "Check Website link")
-        Else
-            con.Open()
-            Dim cmd As New SqlCommand
-            cmd.Connection = con
-            cmd.CommandText = "Select lname, lpass, lurl from Main where lsite=('" + ComboBox1.Text + "')"
-            cmd.CommandType = CommandType.Text
-            Dim sdr As SqlDataReader = cmd.ExecuteReader()
-            sdr.Read()
-            a = sdr("lname").ToString()
-            b = sdr("lpass").ToString()
-            c = sdr("lurl").ToString()
-            con.Close()
-
-
-            Dim ans1 As Integer
-            ans1 = MsgBox("Are you sure you want to Overwrite?", vbOKCancel, "Overwrite the entry?")
-
-            If ans1 = vbOK And (a <> TextBoxuname.Text Or b <> TextBoxpass.Text Or c <> TextBoxlink.Text) Then
-
+            If ComboBox1.Text = "" Then
+                MsgBox("Select an item to be overwritten", MsgBoxStyle.Critical, "Select password")
+            ElseIf TextBoxuname.Text.Trim = "" Then
+                MsgBox("Username cannot have just spaces. Please re-insert the Name!", MsgBoxStyle.Critical, "Re-enter Username")
+            ElseIf TextBoxpass.Text.Trim = "" Then
+                MsgBox("Password cannot have just spaces. Please re-insert the Password!", MsgBoxStyle.Critical, "Re-enter Password")
+            ElseIf TextBoxlink.Text.Trim = "" Then
+                MsgBox("Link cannot have just spaces. Please re-insert the Link!", MsgBoxStyle.Critical, "Re-enter Link")
+            ElseIf TextBoxlink.Text.Contains(" ") Then
+                MsgBox("Link cannot have spaces. Please Re-insert correct Link", MsgBoxStyle.Information, "Check Website link")
+            Else
                 con.Open()
-
-                Dim cmd2 As New SqlCommand
-                cmd2.Connection = con
-                cmd2.CommandText = "UPDATE main SET lname=('" + TextBoxuname.Text + "'),lpass=('" + TextBoxpass.Text + "'),lurl=('" + TextBoxlink.Text + "') where lsite=('" + ComboBox1.Text + "')"
-                cmd2.ExecuteNonQuery()
-                MsgBox("Items saved successfully!", MsgBoxStyle.Information, "Saved!")
+                Dim cmd As New SqlCommand
+                cmd.Connection = con
+                cmd.CommandText = "Select lname, lpass, lurl from Main where lsite=('" + ComboBox1.Text + "')"
+                cmd.CommandType = CommandType.Text
+                Dim sdr As SqlDataReader = cmd.ExecuteReader()
+                sdr.Read()
+                a = sdr("lname").ToString()
+                b = sdr("lpass").ToString()
+                c = sdr("lurl").ToString()
                 con.Close()
 
-                TextBoxuname.Clear()
-                TextBoxpass.Clear()
-                TextBoxlink.Clear()
-                TextBoxsite.Clear()
-                ComboBox1.Text = ""
 
-                ComboBox1.Items.Clear()
-                Try
+                Dim ans1 As Integer
+                ans1 = MsgBox("Are you sure you want to Overwrite?", vbOKCancel, "Overwrite the entry?")
+
+                If ans1 = vbOK And (a <> TextBoxuname.Text Or b <> TextBoxpass.Text Or c <> TextBoxlink.Text) Then
+
                     con.Open()
-                    Dim da As New SqlDataAdapter("select lsite from Main", con)
-                    Dim ds As New DataSet
-                    da.Fill(ds, "1")
 
-
-                    For i As Integer = 0 To ds.Tables("1").Rows.Count - 1
-                        Me.ComboBox1.Items.Add(ds.Tables("1").Rows(i)(0))
-                    Next
-
-                Catch ex As Exception
-                    MsgBox("Error : " + ex.Message)
-                Finally
+                    Dim cmd2 As New SqlCommand
+                    cmd2.Connection = con
+                    cmd2.CommandText = "UPDATE main SET lname=('" + TextBoxuname.Text + "'),lpass=('" + TextBoxpass.Text + "'),lurl=('" + TextBoxlink.Text + "') where lsite=('" + ComboBox1.Text + "')"
+                    cmd2.ExecuteNonQuery()
+                    MsgBox("Items saved successfully!", MsgBoxStyle.Information, "Saved!")
                     con.Close()
-                End Try
-            Else
-                MsgBox("Cannot overwrite the same details. Please change the values.", MsgBoxStyle.Information, "Change the details to overwrite")
+
+                    TextBoxuname.Clear()
+                    TextBoxpass.Clear()
+                    TextBoxlink.Clear()
+                    TextBoxsite.Clear()
+                    ComboBox1.Text = ""
+
+                    ComboBox1.Items.Clear()
+                    Try
+                        con.Open()
+                        Dim da As New SqlDataAdapter("select lsite from Main", con)
+                        Dim ds As New DataSet
+                        da.Fill(ds, "1")
+
+
+                        For i As Integer = 0 To ds.Tables("1").Rows.Count - 1
+                            Me.ComboBox1.Items.Add(ds.Tables("1").Rows(i)(0))
+                        Next
+
+                    Catch ex As Exception
+                        MsgBox("Error : " + ex.Message)
+                    Finally
+                        con.Close()
+                    End Try
+                Else
+                    MsgBox("Cannot overwrite the same details. Please change the values.", MsgBoxStyle.Information, "Change the details to overwrite")
+                End If
+                ComboBox1.Text = current
             End If
-            ComboBox1.Text = current
         End If
 
 
@@ -222,6 +225,8 @@ Public Class Dashboard
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles oplnk.LinkClicked
+
+
         If ComboBox1.Text = "" Then
             MsgBox("Select an item to open Link.", MsgBoxStyle.Information, "Select an entry!")
         Else

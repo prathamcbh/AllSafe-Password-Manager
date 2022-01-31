@@ -6,15 +6,6 @@ Public Class Login
     Dim cmd1 As New SqlCommand
     Dim a As String, b As String
     Dim count As Integer = -1
-
-    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles ButtonLogin.MouseHover
-        ButtonLogin.BackColor = Color.Cyan
-    End Sub
-
-    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles ButtonLogin.MouseEnter
-        ButtonLogin.BackColor = Color.Cyan
-    End Sub
-
     Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles ButtonLogin.MouseLeave
         ButtonLogin.BackColor = Color.FromArgb(27, 26, 25)
 
@@ -58,10 +49,20 @@ Public Class Login
 
     End Sub
 
+    Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
+        If e.KeyCode = Keys.Tab Then
+            TextBox2.Select()
+
+        End If
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Buttonsignup.Click
 
         Form2.Show()
         Me.Close()
     End Sub
 
+    Private Sub ButtonLogin_MouseEnter(sender As Object, e As EventArgs) Handles ButtonLogin.MouseEnter
+        ButtonLogin.BackColor = Color.Cyan
+    End Sub
 End Class

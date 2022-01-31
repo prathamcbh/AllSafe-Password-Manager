@@ -441,8 +441,8 @@ Partial Class Settings
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(574, 427)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panelpass)
         Me.Controls.Add(Me.PanelBkpstr)
+        Me.Controls.Add(Me.Panelpass)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False

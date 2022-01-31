@@ -71,15 +71,27 @@ Public Class Form3
             For x = 1 To Len(PW)
                 CurChar = Mid(PW, x, 1)
                 Select Case Asc(CurChar)
+                    Case 32 To 47       'Characters
+                        HasChar = True
+
                     Case 48 To 57   'Numbers
                         HasNum = True
+
+                    Case 58 To 64       'Characters
+                        HasChar = True
+
                     Case 65 To 90   'Capital letters
                         HasCaps = True
+
+                    Case 91 To 96       'Characters
+                        HasChar = True
+
                     Case 97 To 122  'Lower case letters
                         HasLower = True
-                    Case Else       'Characters
+
+                    Case 123 To 127       'Characters
                         HasChar = True
-                        Exit For
+
                 End Select
             Next x
             chk = False
@@ -143,5 +155,13 @@ Public Class Form3
 
     Private Sub Form3_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter
 
+    End Sub
+
+    Private Sub backbtn_MouseEnter(sender As Object, e As EventArgs) Handles backbtn.MouseEnter
+        backbtn.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub backbtn_MouseLeave(sender As Object, e As EventArgs) Handles backbtn.MouseLeave
+        backbtn.BackColor = Color.Transparent
     End Sub
 End Class

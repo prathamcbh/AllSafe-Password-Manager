@@ -256,4 +256,27 @@ Public Class Bin
         TextBoxpass.PasswordChar = ""
         IC.BringToFront()
     End Sub
+    Private Sub BtnDel_MouseEnter(sender As Object, e As EventArgs) Handles BtnDel.MouseEnter
+        BtnDel.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub BtnDel_MouseLeave(sender As Object, e As EventArgs) Handles BtnDel.MouseLeave
+        BtnDel.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub BtnDelA_MouseEnter(sender As Object, e As EventArgs) Handles BtnDelA.MouseEnter
+        BtnDelA.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub BtnDelA_MouseLeave(sender As Object, e As EventArgs) Handles BtnDelA.MouseLeave
+        BtnDelA.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub backbtn_MouseEnter(sender As Object, e As EventArgs) Handles backbtn.MouseEnter
+        backbtn.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub backbtn_MouseLeave(sender As Object, e As EventArgs) Handles backbtn.MouseLeave
+        backbtn.BackColor = Color.Transparent
+    End Sub
 End Class

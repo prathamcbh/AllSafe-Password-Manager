@@ -78,30 +78,67 @@ Public Class NewPass
             con.Close()
 
             If n > 0 Then
-                n += 1
-                Dim x As String = TextBoxsite.Text + " (" + n.ToString + ")"
-
                 con.Open()
-                cmd2.Connection = con
-                cmd2.CommandText = "insert into Main(lurl,lpass,lname,lsite) values('" + TextBoxlink.Text + "','" + TextBoxpass.Text + "','" + TextBoxuname.Text + "','" + x + "' )"
-
-                cmd2.ExecuteNonQuery()
+                Dim cmd6 As New SqlCommand 'counting no of passwords where name and pass are same
+                cmd6.Connection = con
+                cmd6.CommandText = "Select count ([lpass]) from [Main] where lname like ('%" + TextBoxuname.Text + "%') and lpass like ('%" + TextBoxpass.Text + "%')"
+                Dim countpass As Integer = -1
+                countpass = Convert.ToInt32(cmd6.ExecuteScalar())
                 con.Close()
+
+
+                If countpass > 0 Then
+                    MsgBox("Username and password cannot be the same", MsgBoxStyle.Critical, "Re-enter username and password")
+                Else
+                    n += 1
+                    Dim x As String = TextBoxsite.Text + " (" + n.ToString + ")"
+
+                    con.Open()
+                    cmd2.Connection = con
+                    cmd2.CommandText = "insert into Main(lurl,lpass,lname,lsite) values('" + TextBoxlink.Text + "','" + TextBoxpass.Text + "','" + TextBoxuname.Text + "','" + x + "' )"
+
+                    cmd2.ExecuteNonQuery()
+                    con.Close()
+                    MsgBox("Account successfully created", MsgBoxStyle.Information, "Success!")
+                    Dashboard.Refresh()
+                    Dashboard.ResetText()
+
+                    Dashboard.Show()
+
+                    Me.Close()
+                End If
             Else
+
                 con.Open()
                 cmd4.Connection = con
                 cmd4.CommandText = "insert into Main(lurl,lpass,lname,lsite) values('" + TextBoxlink.Text + "','" + TextBoxpass.Text + "','" + TextBoxuname.Text + "','" + TextBoxsite.Text + "' )"
                 cmd4.ExecuteNonQuery()
                 con.Close()
+                MsgBox("Account successfully created", MsgBoxStyle.Information, "Success!")
 
+                Dashboard.Refresh()
+                Dashboard.ResetText()
+
+                Dashboard.Show()
+
+                Me.Close()
             End If
-            MsgBox("Account successfully created", MsgBoxStyle.Information, "Success!")
-            Dashboard.Refresh()
-            Dashboard.ResetText()
-
-            Dashboard.Show()
-
-            Me.Close()
         End If
+    End Sub
+
+    Private Sub backbtn_MouseEnter(sender As Object, e As EventArgs) Handles backbtn.MouseEnter
+        backbtn.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub backbtn_MouseLeave(sender As Object, e As EventArgs) Handles backbtn.MouseLeave
+        backbtn.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
+        Button1.BackColor = Color.Cyan
+    End Sub
+
+    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        Button1.BackColor = Color.Transparent
     End Sub
 End Class

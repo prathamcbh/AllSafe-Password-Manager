@@ -3,8 +3,6 @@ Public Class Splash
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OneDrive New\OneDrive - T. John Group of Institutions\Projects\Password manager\VB Files\Password Manager 1.1\Database1.mdf;Integrated Security=True")
     Dim cmd As New SqlCommand
     Dim count As Integer = -1
-
-    'Git Try
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ProgressBar1.Value = ProgressBar1.Value + 1
         If ProgressBar1.Value = 80 Then
