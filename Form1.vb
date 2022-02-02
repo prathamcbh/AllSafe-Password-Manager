@@ -55,6 +55,15 @@ Public Class Login
         Me.Close()
     End Sub
 
+    Private Sub TextBox2_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox2.KeyDown
+        If e.KeyCode = Keys.Tab Then
+            ButtonLogin.Select()
+        End If
+        If e.KeyCode = Keys.Enter Then
+            ButtonLogin.PerformClick()
+        End If
+    End Sub
+
     Private Sub ButtonLogin_MouseEnter(sender As Object, e As EventArgs) Handles ButtonLogin.MouseEnter
         ButtonLogin.BackColor = Color.Cyan
     End Sub

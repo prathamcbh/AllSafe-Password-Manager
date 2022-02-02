@@ -56,6 +56,8 @@ Public Class Form2
         Dim PW As String = TextPass.Text
         Dim chk As Boolean = False
         Dim chk2 As Boolean
+
+
         If TextBoxUname.Text = "" Or TextPass.Text = "" Or TextCPass.Text = "" Then
             MsgBox("Username and Password cannot be left blank", MsgBoxStyle.Exclamation, "Enter Credentials")
             chk = True
