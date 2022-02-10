@@ -116,6 +116,7 @@ Partial Class Form2
         Me.backupkeyR.Location = New System.Drawing.Point(281, 382)
         Me.backupkeyR.Name = "backupkeyR"
         Me.backupkeyR.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.backupkeyR.ReadOnly = True
         Me.backupkeyR.Size = New System.Drawing.Size(276, 28)
         Me.backupkeyR.TabIndex = 12
         '
